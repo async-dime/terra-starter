@@ -50,15 +50,13 @@ function App() {
       </header>
 
       {status === WalletStatus.WALLET_NOT_CONNECTED ? (
-        <div>
+        <div className="game-menu-container">
           <img
-            src="https://media0.giphy.com/media/Jmn1siq2cVpGglDcdg/giphy.gif?cid=790b76112cc87f962804eb827586b003d8e3ce833a5faf20&rid=giphy.gif&ct=g"
+            src="https://i.giphy.com/media/QQUEsHquYDjEY/giphy.webp"
             alt="Samurai gif"
           />
         </div>
-      ) : null}
-
-      {status === WalletStatus.WALLET_CONNECTED ? (
+      ) : status === WalletStatus.WALLET_CONNECTED ? (
         <div className="game-menu-container">
           <Menu />
         </div>
